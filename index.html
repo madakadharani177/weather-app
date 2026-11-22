@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App | Week 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="weather-card">
+      <p class="eyebrow">WEATHER DASHBOARD</p>
+      <h1>Check the weather</h1>
+      <p class="subtitle">Get current weather details for any city.</p>
+
+      <form id="weatherForm" class="search-form">
+        <label class="sr-only" for="cityInput">City name</label>
+        <input id="cityInput" type="text" placeholder="Enter city name" required>
+        <button type="submit">Search</button>
+      </form>
+
+      <p id="message" class="message" aria-live="polite">Enter a city to see its current weather.</p>
+
+      <section id="weatherResult" class="weather-result hidden" aria-live="polite">
+        <div class="location-row">
+          <div>
+            <p class="label">CURRENT WEATHER</p>
+            <h2 id="cityName">—</h2>
+          </div>
+          <img id="weatherIcon" alt="Weather icon">
+        </div>
+        <p id="temperature" class="temperature">—°C</p>
+        <p id="condition" class="condition">—</p>
+        <div class="details">
+          <div class="detail">
+            <span class="detail-icon">💧</span>
+            <div><p class="label">HUMIDITY</p><strong id="humidity">—%</strong></div>
+          </div>
+          <div class="detail">
+            <span class="detail-icon">🌡️</span>
+            <div><p class="label">FEELS LIKE</p><strong id="feelsLike">—°C</strong></div>
+          </div>
+          <div class="detail">
+            <span class="detail-icon">💨</span>
+            <div><p class="label">WIND SPEED</p><strong id="windSpeed">— m/s</strong></div>
+          </div>
+        </div>
+      </section>
+      <p class="footer">Powered by OpenWeatherMap</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
